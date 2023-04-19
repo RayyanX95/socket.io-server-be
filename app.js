@@ -11,6 +11,11 @@ const writeSocketObjectToFile = require("./utils/write-socket-object-to-file");
 const app = express();
 const secret = "chatroom-secret";
 
+const server = http.createServer(app);
+const io = socketIo(server, {
+  cors: true, //* Allow CORS Origins for SocketIO
+});
+
 app.use(cors());
 
 //* Add body-parser middleware
@@ -22,9 +27,6 @@ app.use(index);
 
 //* Users routes: Signup, Login, authentications, ...
 app.use("/api/users", usersRoutes);
-
-const server = http.createServer(app);
-const io = socketIo(server);
 
 const decodeToken = (token, secret) => {
   let decodedToken = null;
