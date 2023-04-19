@@ -1,0 +1,490 @@
+{
+  "_events": {},
+  "_eventsCount": 0,
+  "nsp": {
+    "_events": {},
+    "_eventsCount": 1,
+    "sockets": {},
+    "_fns": [],
+    "_ids": 0,
+    "server": {
+      "_events": {},
+      "_eventsCount": 0,
+      "_nsps": {},
+      "parentNsps": {},
+      "parentNamespacesFromRegExp": {},
+      "_path": "/socket.io",
+      "clientPathRegex": {},
+      "_connectTimeout": 45000,
+      "_serveClient": true,
+      "_parser": {
+        "protocol": 5,
+        "PacketType": {
+          "0": "CONNECT",
+          "1": "DISCONNECT",
+          "2": "EVENT",
+          "3": "ACK",
+          "4": "CONNECT_ERROR",
+          "5": "BINARY_EVENT",
+          "6": "BINARY_ACK",
+          "CONNECT": 0,
+          "DISCONNECT": 1,
+          "EVENT": 2,
+          "ACK": 3,
+          "CONNECT_ERROR": 4,
+          "BINARY_EVENT": 5,
+          "BINARY_ACK": 6
+        }
+      },
+      "encoder": {},
+      "opts": {
+        "cleanupEmptyChildNamespaces": false
+      },
+      "sockets": "[Circular]",
+      "eio": {
+        "_events": {},
+        "_eventsCount": 1,
+        "middlewares": [],
+        "clients": {
+          "vQ9Wmi34WWS_zfZoAAAA": {
+            "_events": {
+              "close": [
+                null,
+                null
+              ]
+            },
+            "_eventsCount": 3,
+            "id": "vQ9Wmi34WWS_zfZoAAAA",
+            "server": "[Circular]",
+            "upgrading": false,
+            "upgraded": false,
+            "_readyState": "open",
+            "writeBuffer": [
+              {
+                "type": "message",
+                "options": {
+                  "compress": true
+                },
+                "data": "0{\"sid\":\"jO0KS42L6epnn08sAAAB\"}"
+              }
+            ],
+            "packetsFn": [],
+            "sentCallbackFn": [],
+            "cleanupFn": [
+              null,
+              null
+            ],
+            "request": {
+              "_readableState": {
+                "objectMode": false,
+                "highWaterMark": 16384,
+                "buffer": {
+                  "head": null,
+                  "tail": null,
+                  "length": 0
+                },
+                "length": 0,
+                "pipes": [],
+                "flowing": true,
+                "ended": true,
+                "endEmitted": true,
+                "reading": false,
+                "constructed": true,
+                "sync": true,
+                "needReadable": false,
+                "emittedReadable": false,
+                "readableListening": false,
+                "resumeScheduled": false,
+                "errorEmitted": false,
+                "emitClose": true,
+                "autoDestroy": true,
+                "destroyed": true,
+                "errored": null,
+                "closed": true,
+                "closeEmitted": true,
+                "defaultEncoding": "utf8",
+                "awaitDrainWriters": null,
+                "multiAwaitDrain": false,
+                "readingMore": true,
+                "dataEmitted": false,
+                "decoder": null,
+                "encoding": null
+              },
+              "_events": {
+                "end": [
+                  null,
+                  null
+                ]
+              },
+              "_eventsCount": 1,
+              "socket": {
+                "connecting": false,
+                "_hadError": false,
+                "_parent": null,
+                "_host": null,
+                "_readableState": {
+                  "objectMode": false,
+                  "highWaterMark": 16384,
+                  "buffer": {
+                    "head": null,
+                    "tail": null,
+                    "length": 0
+                  },
+                  "length": 0,
+                  "pipes": [],
+                  "flowing": true,
+                  "ended": false,
+                  "endEmitted": false,
+                  "reading": true,
+                  "constructed": true,
+                  "sync": false,
+                  "needReadable": true,
+                  "emittedReadable": false,
+                  "readableListening": false,
+                  "resumeScheduled": false,
+                  "errorEmitted": false,
+                  "emitClose": false,
+                  "autoDestroy": true,
+                  "destroyed": false,
+                  "errored": null,
+                  "closed": false,
+                  "closeEmitted": false,
+                  "defaultEncoding": "utf8",
+                  "awaitDrainWriters": null,
+                  "multiAwaitDrain": false,
+                  "readingMore": false,
+                  "dataEmitted": false,
+                  "decoder": null,
+                  "encoding": null
+                },
+                "_events": {
+                  "end": [
+                    null,
+                    null
+                  ]
+                },
+                "_eventsCount": 8,
+                "_writableState": {
+                  "objectMode": false,
+                  "highWaterMark": 16384,
+                  "finalCalled": false,
+                  "needDrain": false,
+                  "ending": false,
+                  "ended": false,
+                  "finished": false,
+                  "destroyed": false,
+                  "decodeStrings": false,
+                  "defaultEncoding": "utf8",
+                  "length": 0,
+                  "writing": false,
+                  "corked": 0,
+                  "sync": false,
+                  "bufferProcessing": false,
+                  "writecb": null,
+                  "writelen": 0,
+                  "afterWriteTickInfo": null,
+                  "buffered": [],
+                  "bufferedIndex": 0,
+                  "allBuffers": true,
+                  "allNoop": true,
+                  "pendingcb": 0,
+                  "constructed": true,
+                  "prefinished": false,
+                  "errorEmitted": false,
+                  "emitClose": false,
+                  "autoDestroy": true,
+                  "errored": null,
+                  "closed": false,
+                  "closeEmitted": false
+                },
+                "allowHalfOpen": true,
+                "_sockname": null,
+                "_pendingData": null,
+                "_pendingEncoding": "",
+                "server": {
+                  "_events": {},
+                  "_eventsCount": 5,
+                  "_connections": 2,
+                  "_handle": {
+                    "reading": false
+                  },
+                  "_usingWorkers": false,
+                  "_workers": [],
+                  "_unref": false,
+                  "allowHalfOpen": true,
+                  "pauseOnConnect": false,
+                  "httpAllowHalfOpen": false,
+                  "timeout": 0,
+                  "keepAliveTimeout": 5000,
+                  "maxHeadersCount": null,
+                  "maxRequestsPerSocket": 0,
+                  "headersTimeout": 60000,
+                  "requestTimeout": 0,
+                  "_connectionKey": "6::::5000"
+                },
+                "_server": "[Circular]",
+                "parser": {
+                  "_headers": [],
+                  "_url": "",
+                  "socket": "[Circular]",
+                  "incoming": null,
+                  "outgoing": null,
+                  "maxHeaderPairs": 2000,
+                  "_consumed": true
+                },
+                "_paused": false,
+                "_httpMessage": null,
+                "timeout": 5000,
+                "_peername": {
+                  "address": "::ffff:127.0.0.1",
+                  "family": "IPv6",
+                  "port": 5341
+                }
+              },
+              "httpVersionMajor": 1,
+              "httpVersionMinor": 1,
+              "httpVersion": "1.1",
+              "complete": true,
+              "rawHeaders": [
+                "Host",
+                "localhost:5000",
+                "Connection",
+                "keep-alive",
+                "sec-ch-ua",
+                "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+                "Accept",
+                "*/*",
+                "sec-ch-ua-mobile",
+                "?0",
+                "User-Agent",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+                "sec-ch-ua-platform",
+                "\"Windows\"",
+                "Origin",
+                "http://localhost:3000",
+                "Sec-Fetch-Site",
+                "same-site",
+                "Sec-Fetch-Mode",
+                "cors",
+                "Sec-Fetch-Dest",
+                "empty",
+                "Referer",
+                "http://localhost:3000/",
+                "Accept-Encoding",
+                "gzip, deflate, br",
+                "Accept-Language",
+                "en-US,en;q=0.9,ar;q=0.8"
+              ],
+              "rawTrailers": [],
+              "aborted": false,
+              "upgrade": false,
+              "url": "/socket.io/?EIO=4&transport=polling&t=OUPeOFB",
+              "method": "GET",
+              "statusCode": null,
+              "statusMessage": null,
+              "client": "[Circular]",
+              "_consuming": false,
+              "_dumped": true,
+              "_query": {
+                "EIO": "4",
+                "transport": "polling",
+                "t": "OUPeOFB"
+              },
+              "res": {
+                "_events": {},
+                "_eventsCount": 1,
+                "outputData": [],
+                "outputSize": 0,
+                "writable": true,
+                "destroyed": true,
+                "_last": false,
+                "chunkedEncoding": false,
+                "shouldKeepAlive": true,
+                "maxRequestsOnConnectionReached": false,
+                "_defaultKeepAlive": true,
+                "useChunkedEncodingByDefault": true,
+                "sendDate": true,
+                "_removedConnection": false,
+                "_removedContLen": false,
+                "_removedTE": false,
+                "_contentLength": null,
+                "_hasBody": true,
+                "_trailer": "",
+                "finished": true,
+                "_headerSent": true,
+                "_closed": true,
+                "socket": null,
+                "_header": "HTTP/1.1 200 OK\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 118\r\nDate: Wed, 19 Apr 2023 13:08:31 GMT\r\nConnection: keep-alive\r\nKeep-Alive: timeout=5\r\n\r\n",
+                "_keepAliveTimeout": 5000,
+                "req": "[Circular]",
+                "_sent100": false,
+                "_expect_continue": false,
+                "statusMessage": "OK",
+                "statusCode": 200
+              }
+            },
+            "protocol": 4,
+            "remoteAddress": "::ffff:127.0.0.1",
+            "checkIntervalTimer": null,
+            "upgradeTimeoutTimer": null,
+            "pingTimeoutTimer": {
+              "_idleTimeout": 45000,
+              "_idlePrev": {
+                "_idleNext": "[Circular]",
+                "_idlePrev": "[Circular]",
+                "expiry": 46825,
+                "id": -9007199254740987,
+                "msecs": 45000,
+                "priorityQueuePosition": 4
+              },
+              "_idleNext": "[Circular]",
+              "_idleStart": 1833,
+              "_repeat": null,
+              "_destroyed": false
+            },
+            "pingIntervalTimer": {
+              "_idleTimeout": 25000,
+              "_idlePrev": {
+                "_idleNext": "[Circular]",
+                "_idlePrev": "[Circular]",
+                "expiry": 26823,
+                "id": -9007199254740989,
+                "msecs": 25000,
+                "priorityQueuePosition": 2
+              },
+              "_idleNext": "[Circular]",
+              "_idleStart": 1823,
+              "_repeat": null,
+              "_destroyed": false
+            },
+            "transport": {
+              "_events": {
+                "drain": [
+                  null,
+                  null
+                ]
+              },
+              "_eventsCount": 5,
+              "_readyState": "open",
+              "discarded": false,
+              "protocol": 4,
+              "parser": {
+                "protocol": 4
+              },
+              "closeTimeout": 30000,
+              "maxHttpBufferSize": 1000000,
+              "httpCompression": {
+                "threshold": 1024
+              },
+              "supportsBinary": true,
+              "sid": "vQ9Wmi34WWS_zfZoAAAA",
+              "req": null,
+              "res": null,
+              "writable": false,
+              "dataReq": null,
+              "dataRes": null
+            }
+          }
+        },
+        "clientsCount": 1,
+        "opts": {
+          "pingTimeout": 20000,
+          "pingInterval": 25000,
+          "upgradeTimeout": 10000,
+          "maxHttpBufferSize": 1000000,
+          "transports": [
+            "polling",
+            "websocket"
+          ],
+          "allowUpgrades": true,
+          "httpCompression": "[Circular]",
+          "cors": false,
+          "allowEIO3": false,
+          "cleanupEmptyChildNamespaces": false,
+          "path": "/socket.io"
+        },
+        "ws": {
+          "_events": {},
+          "_eventsCount": 1,
+          "options": {
+            "maxPayload": 1000000,
+            "skipUTF8Validation": false,
+            "handleProtocols": null,
+            "clientTracking": false,
+            "verifyClient": null,
+            "noServer": true,
+            "backlog": null,
+            "server": null,
+            "host": null,
+            "path": null,
+            "port": null
+          },
+          "_state": 0
+        }
+      },
+      "httpServer": "[Circular]",
+      "engine": "[Circular]"
+    },
+    "name": "/",
+    "adapter": {
+      "_events": {},
+      "_eventsCount": 0,
+      "nsp": "[Circular]",
+      "rooms": {},
+      "sids": {},
+      "encoder": "[Circular]"
+    }
+  },
+  "client": {
+    "sockets": {},
+    "nsps": {},
+    "server": "[Circular]",
+    "conn": "[Circular]",
+    "encoder": "[Circular]",
+    "decoder": {
+      "_callbacks": {
+        "$decoded": [
+          null
+        ]
+      }
+    },
+    "id": "vQ9Wmi34WWS_zfZoAAAA"
+  },
+  "recovered": false,
+  "data": {},
+  "connected": true,
+  "acks": {},
+  "fns": [],
+  "flags": {},
+  "server": "[Circular]",
+  "adapter": "[Circular]",
+  "id": "jO0KS42L6epnn08sAAAB",
+  "handshake": {
+    "headers": {
+      "host": "localhost:5000",
+      "connection": "keep-alive",
+      "sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+      "accept": "*/*",
+      "sec-ch-ua-mobile": "?0",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "origin": "http://localhost:3000",
+      "sec-fetch-site": "same-site",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-dest": "empty",
+      "referer": "http://localhost:3000/",
+      "accept-encoding": "gzip, deflate, br",
+      "accept-language": "en-US,en;q=0.9,ar;q=0.8"
+    },
+    "time": "Wed Apr 19 2023 15:08:31 GMT+0200 (Eastern European Standard Time)",
+    "address": "::ffff:127.0.0.1",
+    "xdomain": true,
+    "secure": false,
+    "issued": 1681909711845,
+    "url": "/socket.io/?EIO=4&transport=polling&t=OUPeOFB",
+    "query": "[Circular]",
+    "auth": {
+      "token": "my_jwt_token"
+    }
+  }
+}
