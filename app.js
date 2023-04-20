@@ -28,54 +28,38 @@ app.use(index);
 //* Users routes: Signup, Login, authentications, ...
 app.use("/api/users", usersRoutes);
 
-const decodeToken = (token, secret) => {
-  let decodedToken = null;
-  jwt.verify(token, secret, (err, decoded) => {
-    if (err) {
-      console.error("Error decoding JWT:", err);
-    } else {
-      console.log("Decoded JWT:", decoded);
-      decodedToken = decoded;
-    }
-  });
-
-  return decodedToken;
-};
-
 io.on("connection", (socket) => {
-  // writeSocketObjectToFile(socket);
-  socket.on("message", (data) => {
-    const authToken = socket.handshake.auth.token;
+  console.log("a user connected");
 
-    if (!authToken) {
-      return socket.emit(
-        "unauthorized",
-        "You must be logged in to send messages"
-      );
-    }
-    const token = authToken && authToken?.split("Bearer ")[1];
+  // authenticate the connection using JWT
+  const token = socket.handshake.auth.token;
+  try {
+    const decoded = jwt.verify(token, secret);
+    // authentication successful
+    console.log("authenticated user:", decoded.userId);
+  } catch (error) {
+    // authentication failed
+    console.error("authentication error:", error.message);
+    socket.disconnect();
+    console.log("user disconnected");
 
-    const decodedToken = decodeToken(token, secret);
+    return;
+  }
 
-    if (!decodedToken) {
-      return socket.emit(
-        "unauthorized",
-        "Invalid token, please try to sign in again"
-      );
-    }
-    if (decodedToken.userId !== "Rayyan") {
-      return socket.emit("message", "Unregistered user!");
-    }
-    console.log("Received a message:", data);
-    socket.broadcast.emit("message", data);
+  // handle chat messages
+  socket.on("message", (message) => {
+    console.log("message received:", message);
+    // broadcast the message to all connected clients
+    socket.broadcast.emit("message", message);
   });
 
   socket.on("typing", (data) => {
     socket.broadcast.emit("typing", data);
   });
 
+  // handle disconnect events
   socket.on("disconnect", () => {
-    console.log("A user has disconnected");
+    console.log("user disconnected");
   });
 });
 
