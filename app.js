@@ -33,10 +33,12 @@ io.on("connection", (socket) => {
 
   // authenticate the connection using JWT
   const token = socket.handshake.auth.token;
+  let userId = "";
   try {
     const decoded = jwt.verify(token, secret);
+    userId = decoded.userId;
     // authentication successful
-    console.log("authenticated user:", decoded.userId);
+    console.log("authenticated user:", userId);
   } catch (error) {
     // authentication failed
     console.error("authentication error:", error.message);
@@ -46,11 +48,20 @@ io.on("connection", (socket) => {
     return;
   }
 
-  // handle chat messages
-  socket.on("message", (message) => {
-    console.log("message received:", message);
-    // broadcast the message to all connected clients
-    socket.broadcast.emit("message", message);
+  socket.on("joinRoom", (roomId) => {
+    console.log(`${userId} joining room ${roomId}`);
+    socket.join(roomId);
+
+    // handle chat messages
+    socket.on("message", (message) => {
+      // broadcast the message to all clients in the room
+      socket.broadcast.to(roomId).emit("message", message);
+    });
+
+    socket.on("leaveRoom", (roomId) => {
+      console.log(`${userId} leaving room ${roomId}`);
+      socket.leave(roomId);
+    });
   });
 
   socket.on("typing", (data) => {
